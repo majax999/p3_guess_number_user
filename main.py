@@ -25,10 +25,22 @@
 #  
 
 from os import system
+from time import sleep
 import random
 
 
+def find_computer(x):
+    rand_computer = 0
+    c = 1 # compteur de coup
+    while rand_computer != x:
+        print(f"L'ordinateur n'a pas trouve, essai numero : {c}")
+        c += 1
+        rand_computer = int(random.randint(1, 10))
+        sleep(2)
+
+    print(f"L'ordianteur a trouve en {c} coup(s)")
 
 if __name__ == '__main__':
-    system("clear")
-    
+    system("cls")
+    num_user = int(input("Merci de Fournir un Chiffre : "))
+    find_computer(num_user)
