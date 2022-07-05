@@ -28,6 +28,7 @@ from os import system
 from time import sleep
 import random
 
+from functions import ClearScreen
 
 def find_computer(x):
     rand_computer = 0
@@ -41,6 +42,6 @@ def find_computer(x):
     print(f"L'ordianteur a trouve en {c} coup(s)")
 
 if __name__ == '__main__':
-    system("cls")
+    ClearScreen()
     num_user = int(input("Merci de Fournir un Chiffre : "))
     find_computer(num_user)
